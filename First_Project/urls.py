@@ -14,8 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include, re_path
-from firstapp import views
+from django.urls import include, re_path
+# from firstapp import views
+from validformapp import views
 
 
 from django.conf.urls.static import static
@@ -23,8 +24,9 @@ from django.conf import settings
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
-    re_path(r'^$', views.home, name='home'),
-    re_path(r'^(?P<pizza_id>\d+)/$', views.pizza_detail, name='pizza-detail'),
-  #  path('test_app/', include('testurlapp.test_urls'))
+    # re_path(r'^$', views.home, name='home'),
+    # re_path(r'^(?P<pizza_id>\d+)/$', views.pizza_detail, name='pizza-detail'),
+    re_path(r'^formpage/', views.form_page, name='form-page'),
+    # path('test_app/', include('testurlapp.test_urls'))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

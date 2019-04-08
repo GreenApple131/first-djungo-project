@@ -3,6 +3,7 @@ python manage.py runserver - Запуск серверу
 python manage.py createsuperuser - створення суперюзера(адмін)
 python manage.py makemigrations - переміщення Джанго для того щоб інстукції збереглись в БД
 python manage.py migrate - перевірка чи міграція виконалась
+python manage.py startapp <назва додатку> - створення нового додатку до проекту (в settings.py треба його прописати в INSTALLED_APPS)
 
                 -------------SHELL------------
 python manage.py shell - оболонка для роботи з методами ....

@@ -25,7 +25,7 @@ def pizza_detail(request, pizza_id):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('{}?sent=True'.format(reverse('pizza-detail', kwargs={'pizza_id':pizza.id})))
+            return HttpResponseRedirect('{}?sent=True'.format(reverse('pizza-detail', kwargs={'pizza_id': pizza.id})))
 
     return render(request, 'pizza_detail.html', {
         'pizza': pizza,
