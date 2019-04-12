@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'testurlapp',
     'teststaticapp',
     'validformapp',
+    'authapp',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,9 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     STATICFILE_DIR,
 ]
+
+LOGIN_REDIRECT_URL = '/'
+# ця змінна вказує URL чи ім'я прив'язки сторінки
+# на яку буде перенаправлено користувача після успішного входу
+# в джанго є функція яка викристовується для входу і виходу користувача
+# називається вона LOGIN_REDIRECT_URL в модулі django.contrib.auth.views

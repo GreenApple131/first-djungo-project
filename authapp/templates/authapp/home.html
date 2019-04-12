@@ -5,12 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}Pizza Shop{% endblock %}</title>
-        <a href="{% url 'authapp-login' %}">Вхід</a>
-        <a href="{% url 'authapp-logout' %}">Вихід</a>
+    <title>Home Page</title>
+    <a href="{% url 'authapp-home' %}">Вихід</a>
 </head>
 <body>
-    {% block page %}
-    {% endblock %}
+    <h2>It works!</h2>
 </body>
 </html>
