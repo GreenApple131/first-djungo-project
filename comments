@@ -36,7 +36,6 @@ git status
 git add .  - добавити всі файли
 git add <file>
 git commit -m "<назва коментаря>" - зафіксувати зміни під якоюсь назвою
-git push <origin(основна гілка)/(назва гілки)> - зберегти зміни на github
 git push --set-upstream origin master - зберегти зміни на github
 
 git checkout -b "назва створення гілки"

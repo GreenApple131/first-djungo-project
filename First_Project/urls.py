@@ -34,6 +34,7 @@ urlpatterns = [
     re_path(r'^authapp/logout/$', auth_views.LogoutView.as_view(next_page='/'), name='authapp-logout'),
     re_path(r'^authapp/$', authapp_views.authapp_home, name='authapp-home'),
 
+    re_path(r'^sign-up/', authapp_views.sign_up, name='sign-up'),
     # re_path(r'^test_app/', include('testurlapp.test_urls'))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
