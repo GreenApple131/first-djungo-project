@@ -16,7 +16,7 @@ def authapp_home(request):
     return render(request, 'authapp/home.html', {})
 
 
-def sign_up(request):
+def authapp_sign_up(request):
     user_form = UserForm()
     pizzashop_form = PizzaShopForm()
 

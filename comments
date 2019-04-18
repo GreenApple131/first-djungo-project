@@ -6,22 +6,6 @@ python manage.py migrate - перевірка чи міграція викона
 python manage.py startapp <назва додатку> - створення нового додатку до проекту (в settings.py треба його прописати в INSTALLED_APPS)
 
                 -------------SHELL------------
-python manage.py shell - оболонка для роботи з методами ....
->>>from firstapp.models import Pizza - імпортує модель Pizza
->>>pizza = Pizza.objects.all()  - створення змінної pizza для роботи з моделлю Pizza,
-                .objects - підтримується всіма моделями і зберігає в особливий об'єкт - Диспетчер записів
-                .objects.all - у диспетчера можна викликати метод .all() він поверне нам список записів в вигляді об'єкту класу QuerySet
->>>print(pizza) - виводить всі записи моделі pizza(вище створеної) у вигляді класу(список) QuerySet
-        QuerySet - дозволяє читати дані із БД, фільтрувати і змінювати їх порядок
->>>p1 = pizza[0] - можна отримати будь-який елемент із списку записів
->>>print(p1) - перший елемент
-
->>>price = p1.price - можна звертатись до різних полім методу
->>>print(price) - виведе ціну
-
->>>id= p1.id - звернутись до ідетифікатора запису id і отримати його номер
->>>print(id1)
-
 Фільтрація в QuerySet
 >>>pizza_filter = Pizza.objects.filter(name__startswith='Ма') - сортування з початком "Ма"
 >>>pizza_price = Pizza.objects.filter(price__lte=80) - ціна включно до 80
